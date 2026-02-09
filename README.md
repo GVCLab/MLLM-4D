@@ -1,5 +1,8 @@
-### MLLM-4D: Towards Visual-based Spatial-Temporal Intelligence
-[ArXiv]() |[PDF]() | [Model]()
+## MLLM-4D: Towards Visual-based Spatial-Temporal Intelligence
+
+Xingyilang Yin, Chengzhengxu Li, Jiahao Chang, Chi-Man Pun, Xiaodong Cun
+
+[ArXiv]() | [PDF]() | [Model]()
 
 🤗 If you find MLLM-4D useful, **please help ⭐ this repo**, which is important to Open-Source projects. Thanks!
 
