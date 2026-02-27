@@ -1,5 +1,10 @@
 import torch
+from argparse import ArgumentParser
 from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
+
+parser = ArgumentParser(description="Inference Demo")
+parser.add_argument("--model_type:", type=str, default="MLLM-4D-RFT")
+parser.add_argument("--model_path", type=str, default="MLLM-4D/MLLM-4D-RFT-1.0")
 
 
 def inference(
@@ -87,6 +92,6 @@ def inference(
     print("response:", response[0])
 
 
-
 if __name__ == "__main__":
-    inference()
+    args = parser.parse_args()
+    inference(args.model_type, args.model_path)
