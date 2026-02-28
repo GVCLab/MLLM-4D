@@ -2,7 +2,7 @@
 
 [Xingyilang Yin](https://flow0314.github.io/)<sup>1,2</sup>, [Chengzhengxu Li](https://scholar.google.com/citations?user=NSWsjzcAAAAJ&hl=zh-CN)<sup>3</sup>, [Jiahao Chang](https://github.com/Jiahao620)<sup>4</sup>, [Chi-Man Pun](https://cmpun.github.io/)<sup>1,📫</sup>, [Xiaodong Cun](https://vinthony.github.io/academic/)<sup>2,📫</sup>
 
-[[ArXiv（Coming）]]() | [[PDF（Coming）]]() | [[Model]](https://huggingface.co/flow666/MLLM-4D/tree/main) | [[Dataset(Coming)]]()
+[ArXiv（Coming）]() | [PDF（Coming）]() | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | [Dataset(Coming)]()
 
 ###### <sup>1</sup> University of Macau, <sup>2</sup> GVC Lab, Great Bay University, <sup>3</sup> Xi’an Jiaotong University, <sup>4</sup> CUHK-SZ
 
