@@ -1,8 +1,8 @@
 ### MLLM-4D: Towards Visual-based Spatial-Temporal Intelligence
 
-Xingyilang Yin, Chengzhengxu Li, Jiahao Chang, Chi-Man Pun, Xiaodong Cun
+[Xingyilang Yin](https://flow0314.github.io/), [Chengzhengxu Li](https://scholar.google.com/citations?user=NSWsjzcAAAAJ&hl=zh-CN), [Jiahao Chang](https://github.com/Jiahao620), [Chi-Man Pun](https://cmpun.github.io/), [Xiaodong Cun](https://vinthony.github.io/academic/)
 
-[ArXiv]() | [PDF]() | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main)
+[ArXiv]() | [PDF]() | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | [Dataset]() 
 
 🤗 If you find MLLM-4D useful, **please help ⭐ this repo**, which is important to Open-Source projects. Thanks!
 
@@ -25,7 +25,8 @@ conda create -n mllm4d python=3.10
 conda activate mllm4d 
 pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128
 pip install -r requirements.txt
-
+wget https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.8cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
+pip install flash_attn-2.8.3+cu12torch2.8cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
 ```
 
 ### 3. Download pretrained models
@@ -47,7 +48,7 @@ python scripts/inference.py --model_type "MLLM-4D-RFT" --model_path PATH-to-MLLM
 ```
 
 ## 📋 TODO
-- [ ] We have completed the code and data clean up. (Release coming soon!)
+- [ ] We have completed the code and data cleanup. Release coming soon!
 - [ ] RFT Stage: Release the `MLLM4D-R1-30k` dataset and `Reinforcement Fine-Tuning code`!
 - [ ] Cold-Start Phase: Release the `Cold-Start Data` and `Cold-Start Fine-Tuning code`!
 - [ ] SFT Stage: Release the `MLLM4D-2M` dataset and `Supervised Fine-Tuning code`!
