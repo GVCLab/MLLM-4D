@@ -1,4 +1,4 @@
-### MLLM-4D: Towards Visual-based Spatial-Temporal Intelligence
+# MLLM-4D: Towards Visual-based Spatial-Temporal Intelligence
 
 [Xingyilang Yin](https://flow0314.github.io/)<sup>1,2</sup>, [Chengzhengxu Li](https://scholar.google.com/citations?user=NSWsjzcAAAAJ&hl=zh-CN)<sup>3</sup>, [Jiahao Chang](https://github.com/Jiahao620)<sup>4</sup>, [Chi-Man Pun](https://cmpun.github.io/)<sup>1,📫</sup>, [Xiaodong Cun](https://vinthony.github.io/academic/)<sup>2,📫</sup>
 
