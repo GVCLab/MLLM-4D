@@ -6,7 +6,7 @@ ArXiv | PDF | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | Datase
 
 ###### <sup>1</sup> University of Macau, <sup>2</sup> GVC Lab, Great Bay University, <sup>3</sup> Xi’an Jiaotong University, <sup>4</sup> CUHK-SZ
 
->TL;DR: MLLM-4D achieves advanced visual-based spatial-temporal intelligence via the post-training of the vision language model (VLM). Our method is specifically focusing on understanding the dynamic relationships between objects and camera.
+>TL;DR: MLLM-4D achieves advanced visual-based spatial-temporal intelligence via the post-training of the vision language model (VLM). Our method specifically focuses on understanding the dynamic relationships between objects and the camera.
 
 ![Teaser](assets/mllm4d_teaser.png)
 
