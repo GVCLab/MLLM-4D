@@ -6,11 +6,7 @@ ArXiv | PDF | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | Datase
 
 ###### <sup>1</sup> University of Macau, <sup>2</sup> GVC Lab, Great Bay University, <sup>3</sup> Xi’an Jiaotong University, <sup>4</sup> CUHK-SZ
 
-
-🤗 If you find MLLM-4D useful, **please help ⭐ this repo**, which is important to Open-Source projects. Thanks!
-
-TL;DR: We propose MLLM-4D, a framework for advancing visual-based spatial-temporal intelligence. Our method is motivated by human innate cognition: humans receive 2D visual inputs, while the brain's inherent spatiotemporal intelligence enables understanding and reasoning of relationships within the 4D world.
-
+>TL;DR: MLLM-4D achieves advanced visual-based spatial-temporal intelligence via the post-training of the vision language model (VLM). Our method is specifically focusing on understanding the dynamic relationships between objects and camera.
 
 ![Teaser](assets/mllm4d_teaser.png)
 
@@ -59,6 +55,7 @@ python scripts/inference.py --model_type "MLLM-4D-RFT" --model_path PATH-to-MLLM
 
 ## 🤗 Acknowledgement
 Our work is built upon [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL), thanks to their invaluable contributions
+🤗 If you find MLLM-4D useful, **please help ⭐ this repo**, which is important to Open-Source projects. Thanks!
 
 ## 📜 Citation
 If you find the work useful, please consider citing:
