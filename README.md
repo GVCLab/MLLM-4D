@@ -1,12 +1,12 @@
 ## MLLM-4D: Towards Visual-based Spatial-Temporal Intelligence
 
-#### [Xingyilang Yin](https://flow0314.github.io/)<sup>1,2</sup>, [Chengzhengxu Li](https://scholar.google.com/citations?user=NSWsjzcAAAAJ&hl=zh-CN)<sup>3</sup>, [Jiahao Chang](https://github.com/Jiahao620)<sup>4</sup>, [Chi-Man Pun](https://cmpun.github.io/)<sup>1,📫</sup>, [Xiaodong Cun](https://vinthony.github.io/academic/)<sup>2,📫</sup>
+#### [Xingyilang Yin*](https://flow0314.github.io/)<sup>1,2</sup>, [Chengzhengxu Li*](https://scholar.google.com/citations?user=NSWsjzcAAAAJ&hl=zh-CN)<sup>3</sup>, [Jiahao Chang](https://github.com/Jiahao620)<sup>4</sup>, [Chi-Man Pun](https://cmpun.github.io/)<sup>1,📫</sup>, [Xiaodong Cun](https://vinthony.github.io/academic/)<sup>2,📫</sup>
 
 ArXiv | PDF | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | Dataset
 
-###### <sup>1</sup> University of Macau, <sup>2</sup> GVC Lab, Great Bay University, <sup>3</sup> Xi’an Jiaotong University, <sup>4</sup> CUHK-SZ
+###### <sup>1</sup> University of Macau, <sup>2</sup> GVC Lab, Great Bay University, <sup>3</sup> Xi’an Jiaotong University, <sup>4</sup> CUHKSZ
 
->TL;DR: MLLM-4D achieves advanced visual-based spatial-temporal intelligence via the post-training of the vision language model (VLM). Our method specifically focuses on understanding the dynamic relationships between objects and the camera.
+>TL;DR: MLLM-4D achieves advanced visual-based spatial-temporal intelligence. Our method specifically focuses on understanding and reasoning about the time-evolving relationships between objects and camera within 3D space.
 
 ![Teaser](assets/mllm4d_teaser.png)
 
@@ -54,8 +54,10 @@ python scripts/inference.py --model_type "MLLM-4D-RFT" --model_path PATH-to-MLLM
 - [x] **[2026.02.28]** 🔥 Release the `arXiv paper`, `inference demo`, and `pretrained weights`!
 
 ## 🤗 Acknowledgement
-Our work is built upon [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL), thanks to their invaluable contributions
-🤗 If you find MLLM-4D useful, **please help ⭐ this repo**, which is important to Open-Source projects. Thanks!
+If you find MLLM-4D useful, **please help ⭐ this repo**, which is important to Open-Source projects. Thanks!
+
+Our work is built upon [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL), thanks to their invaluable contributions!
+
 
 ## 📜 Citation
 If you find the work useful, please consider citing:
