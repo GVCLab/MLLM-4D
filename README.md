@@ -17,7 +17,7 @@ ArXiv | PDF | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | Datase
 git clone https://github.com/GVCLab/MLLM-4D.git
 cd MLLM-4D
 ```
-### 2. Setup environments
+### 2. Setup Environments
 MLLM-4D is tested with CUDA 12.1/12.8 on H100.
 ```bash
 conda create -n mllm4d python=3.10
@@ -28,12 +28,12 @@ wget https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash
 pip install flash_attn-2.8.3+cu12torch2.8cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
 ```
 
-### 3. Download pretrained models
+### 3. Download Pretrained Models
 ```bash
 python scripts/download_ckpt_hf.py
 ```
 
-<!-- ### 4. Download the datasets
+<!-- ### 4. Download the Datasets
 ```bash
 ``` -->
 
@@ -75,7 +75,6 @@ bash scripts/sft_mllm-4d-sft_cold-start.sh
 If you find MLLM-4D useful, **please help ⭐ this repo**, which is important to Open-Source projects. Thanks!
 
 Our work is built upon [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL), thanks to their invaluable contributions!
-
 
 ## 📚 Citation
 If you find the work useful, please consider citing:

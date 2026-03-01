@@ -10,7 +10,7 @@ batch_size=8
 grad_accum_steps=1
 entry_file=qwenvl/train/train_qwen.py
 datasets=mllm4d_cold_start
-run_name="qwen3vl"
+run_name="qwen3vl_mllm-4d-cot"
 output_dir=./output_cold_start_mllm4d
 
 # Training arguments

@@ -3,13 +3,11 @@ from argparse import ArgumentParser
 from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
 
 parser = ArgumentParser(description="Inference Demo")
-parser.add_argument("--model_type:", type=str, default="MLLM-4D-RFT")
+parser.add_argument("--model_type", type=str, default="MLLM-4D-RFT")
 parser.add_argument("--model_path", type=str, default="MLLM-4D/MLLM-4D-RFT-1.0")
 
 
 def inference(
-    # model_type: str = "MLLM-4D-SFT",
-    # model_path: str = "MLLM-4D/MLLM-4D-SFT-1.0",
     model_type: str = "MLLM-4D-RFT",
     model_path: str = "MLLM-4D/MLLM-4D-RFT-1.0",
 ):

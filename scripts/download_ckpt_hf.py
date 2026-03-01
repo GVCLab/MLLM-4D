@@ -1,4 +1,3 @@
-import os
 from huggingface_hub import snapshot_download
 
 def download_model():

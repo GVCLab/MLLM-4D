@@ -10,7 +10,7 @@ batch_size=8
 grad_accum_steps=1
 entry_file=qwenvl/train/train_qwen.py
 datasets=mllm4d_2M
-run_name="qwen3vl"
+run_name="qwen3vl_mllm-4d-sft"
 output_dir=./output_sft_mllm4d_2M
 
 # Training arguments
