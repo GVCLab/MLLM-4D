@@ -6,8 +6,14 @@ MLLM4D_2M = {
     "data_path": "Path-to-Training_videos",
 }
 
+MLLM4D_COLD_START = {
+    "annotation_path": "Path-to-Cold-Start-Data",
+    "data_path": "Path-to-Training_videos",
+}
+
 data_dict = {
     "mllm4d_2M": MLLM4D_2M,
+    "mllm4d_cold_start": MLLM4D_COLD_START,
 }
 
 
@@ -33,7 +39,7 @@ def data_list(dataset_names):
 
 
 if __name__ == "__main__":
-    dataset_names = ["cambrian_737k"]
+    dataset_names = ["mllm4d_2M"]
     configs = data_list(dataset_names)
     for config in configs:
         print(config)

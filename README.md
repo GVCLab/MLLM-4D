@@ -47,11 +47,19 @@ python scripts/inference.py --model_type "MLLM-4D-RFT" --model_path PATH-to-MLLM
 ```
 
 ## 🚀 Train
-### 1. Supervised Fine-Tuning code using our MLLM4D-2M.
+### 1. Supervised Fine-Tuning Using Our MLLM4D-2M Dataset.
 ```bash
 cd qwen-vl-sft
 bash scripts/sft_qwen3-vl-8b_mllm4d-2M.sh
 ```
+
+### 2. Cold-Start Fine-Tuning Using Our Cold-Start Data.
+```bash
+cd qwen-vl-sft
+bash scripts/sft_mllm-4d-sft_cold-start.sh
+```
+
+### 3. Reinforcement Fine-Tuning Using Our MLLM4D-R1-30k Dataset.
 
 
 ## 📋 TODO
