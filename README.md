@@ -1,4 +1,4 @@
-## MLLM-4D: Towards Visual-based Spatial-Temporal Intelligence
+## ✨MLLM-4D: Towards Visual-based Spatial-Temporal Intelligence✨
 
 #### [Xingyilang Yin*](https://flow0314.github.io/)<sup>1,2</sup>, [Chengzhengxu Li*](https://scholar.google.com/citations?user=NSWsjzcAAAAJ&hl=zh-CN)<sup>3</sup>, [Jiahao Chang](https://github.com/Jiahao620)<sup>4</sup>, [Chi-Man Pun](https://cmpun.github.io/)<sup>1,📫</sup>, [Xiaodong Cun](https://vinthony.github.io/academic/)<sup>2,📫</sup>
 
@@ -46,14 +46,16 @@ python scripts/inference.py --model_type "MLLM-4D-SFT" --model_path PATH-to-MLLM
 python scripts/inference.py --model_type "MLLM-4D-RFT" --model_path PATH-to-MLLM-4D-RFT
 ```
 
-## 🚀 Train
+## 🚂 Training
 ### 1. Supervised Fine-Tuning Using Our MLLM4D-2M Dataset.
+Please set up the parameters in [\_\_init\_\_.py](./qwen-vl-sft/qwenvl/data/__init__.py) and [sft_qwen3-vl-8b_mllm4d-2M.sh](./qwen-vl-sft/scripts/sft_qwen3-vl-8b_mllm4d-2M.sh).
 ```bash
 cd qwen-vl-sft
 bash scripts/sft_qwen3-vl-8b_mllm4d-2M.sh
 ```
 
 ### 2. Cold-Start Fine-Tuning Using Our Cold-Start Data.
+Please set up the parameters in [\_\_init\_\_.py](./qwen-vl-sft/qwenvl/data/__init__.py) and [sft_mllm-4d-sft_cold-start.sh](./qwen-vl-sft/scripts/sft_mllm-4d-sft_cold-start.sh).
 ```bash
 cd qwen-vl-sft
 bash scripts/sft_mllm-4d-sft_cold-start.sh
@@ -75,7 +77,7 @@ If you find MLLM-4D useful, **please help ⭐ this repo**, which is important to
 Our work is built upon [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL), thanks to their invaluable contributions!
 
 
-## 📜 Citation
+## 📚 Citation
 If you find the work useful, please consider citing:
 ```BibTeXw
 
