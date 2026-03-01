@@ -6,7 +6,7 @@ ArXiv | PDF | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | Datase
 
 ###### <sup>1</sup> University of Macau, <sup>2</sup> GVC Lab, Great Bay University, <sup>3</sup> Xi’an Jiaotong University, <sup>4</sup> CUHKSZ
 
->TL;DR: MLLM-4D achieves advanced visual-based spatial-temporal intelligence. Our method specifically focuses on understanding and reasoning about the time-evolving relationships between objects and camera within 3D space.
+>TL;DR: MLLM-4D achieves advanced visual-based spatial-temporal intelligence. Our method specifically focuses on understanding and reasoning about the time-evolving relationships between objects and camera within 3D space. Read our paper for more details.
 
 ![Teaser](assets/mllm4d_teaser.png)
 
@@ -45,6 +45,14 @@ python scripts/inference.py --model_type "MLLM-4D-SFT" --model_path PATH-to-MLLM
 # for MLLM-4D-RFT
 python scripts/inference.py --model_type "MLLM-4D-RFT" --model_path PATH-to-MLLM-4D-RFT
 ```
+
+## 🚀 Train
+### 1. Supervised Fine-Tuning code using our MLLM4D-2M.
+```bash
+cd qwen-vl-sft
+bash scripts/sft_qwen3-vl-8b_mllm4d-2M.sh
+```
+
 
 ## 📋 TODO
 - [ ] We have completed the code and data cleanup. Release coming soon!
