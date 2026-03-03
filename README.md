@@ -2,7 +2,7 @@
 
 #### [Xingyilang Yin*](https://flow0314.github.io/)<sup>1,2</sup>, [Chengzhengxu Li*](https://scholar.google.com/citations?user=NSWsjzcAAAAJ&hl=zh-CN)<sup>3</sup>, [Jiahao Chang](https://github.com/Jiahao620)<sup>4</sup>, [Chi-Man Pun](https://cmpun.github.io/)<sup>1,📫</sup>, [Xiaodong Cun](https://vinthony.github.io/academic/)<sup>2,📫</sup>
 
-ArXiv | PDF | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | Dataset
+[ArXiv](https://arxiv.org/abs/2603.00515) | [PDF](https://arxiv.org/pdf/2603.00515) | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | Dataset
 
 ###### <sup>1</sup> University of Macau, <sup>2</sup> GVC Lab, Great Bay University, <sup>3</sup> Xi’an Jiaotong University, <sup>4</sup> CUHKSZ
 
@@ -79,5 +79,10 @@ Our work is built upon [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL), thanks to
 ## 📚 Citation
 If you find the work useful, please consider citing:
 ```BibTeXw
-
+@article{yin2026mllm4d,
+    title={MLLM-4D: Towards Visual-based Spatial-Temporal Intelligence},
+    author={Yin, Xingyilang and Li, Chengzhengxu and Chang, Jiahao and Pun, Chi-Man and Cun, Xiaodong},
+    journal={arXiv preprint arXiv:2603.00515},
+    year={2026}
+}
 ```
