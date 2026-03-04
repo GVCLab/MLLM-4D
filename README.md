@@ -2,7 +2,7 @@
 
 #### [Xingyilang Yin*](https://flow0314.github.io/)<sup>1,2</sup>, [Chengzhengxu Li*](https://scholar.google.com/citations?user=NSWsjzcAAAAJ&hl=zh-CN)<sup>3</sup>, [Jiahao Chang](https://github.com/Jiahao620)<sup>4</sup>, [Chi-Man Pun](https://cmpun.github.io/)<sup>1,📫</sup>, [Xiaodong Cun](https://vinthony.github.io/academic/)<sup>2,📫</sup>
 
-[ArXiv](https://arxiv.org/abs/2603.00515) | [PDF](https://arxiv.org/pdf/2603.00515) | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | Dataset
+[ArXiv](https://arxiv.org/abs/2603.00515) | [PDF](https://arxiv.org/pdf/2603.00515) | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | [Dataset](https://huggingface.co/datasets/flow666/MLLM-4D-Datasets/tree/main)
 
 ###### <sup>1</sup> University of Macau, <sup>2</sup> GVC Lab, Great Bay University, <sup>3</sup> Xi’an Jiaotong University, <sup>4</sup> CUHKSZ
 
@@ -33,9 +33,10 @@ pip install flash_attn-2.8.3+cu12torch2.8cxx11abiFALSE-cp310-cp310-linux_x86_64.
 python scripts/download_ckpt_hf.py
 ```
 
-<!-- ### 4. Download the Datasets
+### 4. Download the Datasets
 ```bash
-``` -->
+python scripts/download_dataset_hf.py
+```
 
 ## 💫 Inference 
 ### 1. Inference Demo
@@ -67,12 +68,12 @@ bash scripts/sft_mllm-4d-sft_cold-start.sh
 ## 📋 TODO
 - [ ] We have completed the code and data cleanup. Release coming soon!
 - [ ] RFT Stage: Release the `MLLM4D-R1-30k` dataset and `Reinforcement Fine-Tuning code`!
-- [ ] Cold-Start Phase: Release the `Cold-Start Data` and `Cold-Start Fine-Tuning code`!
-- [ ] SFT Stage: Release the `MLLM4D-2M` dataset and `Supervised Fine-Tuning code`!
+- [x] **[2026.03.04]** 🔥 Cold-Start Phase: Release the `Cold-Start Data` and `Cold-Start Fine-Tuning code`!
+- [x] **[2026.03.04]** 🔥 SFT Stage: Release the `MLLM4D-2M` dataset and `Supervised Fine-Tuning code`!
 - [x] **[2026.02.28]** 🔥 Release the `arXiv paper`, `inference demo`, and `pretrained weights`!
 
 ## 🤗 Acknowledgement
-If you find MLLM-4D useful, **please help ⭐ this repo**, which is important to Open-Source projects. Thanks!
+If you find MLLM-4D useful, **please help ⭐ this repo**, which is important to Open-Source projects. Thanks🙏!
 
 Our work is built upon [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL), thanks to their invaluable contributions!
 
