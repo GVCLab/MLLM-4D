@@ -65,6 +65,19 @@ bash scripts/sft_mllm-4d-sft_cold-start.sh
 ### 3. Reinforcement Fine-Tuning Using Our MLLM4D-R1-30k Dataset.
 
 
+## 📊 Evaluation
+```bash
+cd evaluation
+# response generation for MLLM-4D-SFT
+python python main.py --model PATH-to-MLLM-4D-SFT --prompt direct-output --total_frames -1 --max_num -1 --data_path data/real_mc.json --output_dir outpurs_MLLM-4D-SFT --overwrite
+# response generation for MLLM-4D-RFT
+python python main.py --model PATH-to-MLLM-4D-RFT --prompt rl_cot --total_frames -1 --max_num -1 --data_path data/real_mc.json --output_dir outpurs_MLLM-4D-SFT --overwrite
+# evalution with Qwen3-VL
+python evaluation.py --model_name PATH-to-Qwen3-VL-8B-Instruct --data_name outputs_demo/real_mc_direct-output/MLLM-4D-RFT-1.0.json
+```
+
+
+
 ## 📋 TODO
 - [ ] We have completed the code and data cleanup. Release coming soon!
 - [ ] RFT Stage: Release the `MLLM4D-R1-30k` dataset and `Reinforcement Fine-Tuning code`!
