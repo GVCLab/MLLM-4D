@@ -69,9 +69,9 @@ bash scripts/sft_mllm-4d-sft_cold-start.sh
 ```bash
 cd evaluation
 # response generation for MLLM-4D-SFT
-python python main.py --model PATH-to-MLLM-4D-SFT --prompt direct-output --total_frames -1 --max_num -1 --data_path data/real_mc.json --output_dir outpurs_MLLM-4D-SFT --overwrite
+python python main.py --model PATH-to-MLLM-4D-SFT --prompt direct-output --total_frames -1 --max_num -1 --data_path data/real_mc.json --output_dir outputs_MLLM-4D-SFT --overwrite
 # response generation for MLLM-4D-RFT
-python python main.py --model PATH-to-MLLM-4D-RFT --prompt rl_cot --total_frames -1 --max_num -1 --data_path data/real_mc.json --output_dir outpurs_MLLM-4D-SFT --overwrite
+python python main.py --model PATH-to-MLLM-4D-RFT --prompt rl_cot --total_frames -1 --max_num -1 --data_path data/real_mc.json --output_dir outputs_MLLM-4D-SFT --overwrite
 # evalution with Qwen3-VL
 python evaluation.py --model_name PATH-to-Qwen3-VL-8B-Instruct --data_name outputs_demo/real_mc_direct-output/MLLM-4D-RFT-1.0.json
 ```
@@ -81,6 +81,7 @@ python evaluation.py --model_name PATH-to-Qwen3-VL-8B-Instruct --data_name outpu
 ## 📋 TODO
 - [ ] We have completed the code and data cleanup. Release coming soon!
 - [ ] RFT Stage: Release the `MLLM4D-R1-30k` dataset and `Reinforcement Fine-Tuning code`!
+- [x] **[2026.04.10]** 🔥 Release the evaluation code and results .json!
 - [x] **[2026.03.04]** 🔥 Cold-Start Phase: Release the `Cold-Start Data` and `Cold-Start Fine-Tuning code`!
 - [x] **[2026.03.04]** 🔥 SFT Stage: Release the `MLLM4D-2M` dataset and `Supervised Fine-Tuning code`!
 - [x] **[2026.02.28]** 🔥 Release the `arXiv paper`, `inference demo`, and `pretrained weights`!
