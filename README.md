@@ -2,11 +2,13 @@
 
 #### [Xingyilang Yin*](https://flow0314.github.io/)<sup>1,2</sup>, [Chengzhengxu Li*](https://scholar.google.com/citations?user=NSWsjzcAAAAJ&hl=zh-CN)<sup>3</sup>, [Jiahao Chang](https://github.com/Jiahao620)<sup>4</sup>, [Chi-Man Pun](https://cmpun.github.io/)<sup>1,📫</sup>, [Xiaodong Cun](https://vinthony.github.io/academic/)<sup>2,📫</sup>
 
-[ArXiv](https://arxiv.org/abs/2603.00515) | [PDF](https://arxiv.org/pdf/2603.00515) | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | [Dataset](https://huggingface.co/datasets/flow666/MLLM-4D-Datasets/tree/main)
+[ArXiv](https://arxiv.org/abs/2603.00515) | [PDF](https://arxiv.org/pdf/2603.00515) | [Model](https://huggingface.co/flow666/MLLM-4D/tree/main) | [Dataset](https://huggingface.co/datasets/flow666/MLLM-4D-Datasets/tree/main) | International Conference on Machine Learning (ICML) 2026
 
 ###### <sup>1</sup> University of Macau, <sup>2</sup> GVC Lab, Great Bay University, <sup>3</sup> Xi’an Jiaotong University, <sup>4</sup> CUHKSZ
 
->TL;DR: MLLM-4D achieves advanced visual-based spatial-temporal intelligence. Our method specifically focuses on understanding and reasoning about the time-evolving relationships between objects and camera within 3D space. Read our paper for more details.
+🤗 If you find MLLM-4D useful, **please help ⭐ this repo**, which is important to Open-Source projects. Thanks 🙏!
+
+>TL;DR: MLLM-4D achieves visual-based spatial-temporal intelligence. Our method specifically focuses on understanding and reasoning about the time-evolving relationships between objects and camera within 3D space. Read our paper for more details.
 
 ![Teaser](assets/mllm4d_teaser.png)
 
@@ -47,49 +49,54 @@ python scripts/inference.py --model_type "MLLM-4D-SFT" --model_path PATH-to-MLLM
 python scripts/inference.py --model_type "MLLM-4D-RFT" --model_path PATH-to-MLLM-4D-RFT
 ```
 
+## 📊 Evaluation
+### 1. Response Generation
+```bash
+cd evaluation
+# response generation for MLLM-4D-SFT
+python python main.py --model PATH-to-MLLM-4D-SFT --prompt direct-output --total_frames -1 --max_num -1 --data_path data/real_mc.json --output_dir outputs_MLLM-4D-SFT --overwrite
+# response generation for MLLM-4D-RFT
+python python main.py --model PATH-to-MLLM-4D-RFT --prompt rl_cot --total_frames -1 --max_num -1 --data_path data/real_mc.json --output_dir outputs_MLLM-4D-RFT --overwrite
+```
+
+### 2. Evaluation
+```bash
+# evaluation with Qwen3-VL
+python evaluation.py --model_name PATH-to-Qwen3-VL-8B-Instruct --data_name outputs_demo/real_mc/MLLM-4D-RFT-1.0.json
+```
+
 ## 🚂 Training
-### 1. Supervised Fine-Tuning Using Our MLLM4D-2M Dataset.
+### 1. Supervised Fine-Tuning Using Our MLLM4D-2M Dataset
 Please set up the parameters in [\_\_init\_\_.py](./qwen-vl-sft/qwenvl/data/__init__.py) and [sft_qwen3-vl-8b_mllm4d-2M.sh](./qwen-vl-sft/scripts/sft_qwen3-vl-8b_mllm4d-2M.sh).
 ```bash
 cd qwen-vl-sft
 bash scripts/sft_qwen3-vl-8b_mllm4d-2M.sh
 ```
 
-### 2. Cold-Start Fine-Tuning Using Our Cold-Start Data.
+### 2. Cold-Start Fine-Tuning Using Our MLLM4D-Cold-Start Data
 Please set up the parameters in [\_\_init\_\_.py](./qwen-vl-sft/qwenvl/data/__init__.py) and [sft_mllm-4d-sft_cold-start.sh](./qwen-vl-sft/scripts/sft_mllm-4d-sft_cold-start.sh).
 ```bash
 cd qwen-vl-sft
 bash scripts/sft_mllm-4d-sft_cold-start.sh
 ```
 
-### 3. Reinforcement Fine-Tuning Using Our MLLM4D-R1-30k Dataset.
-
-
-## 📊 Evaluation
+### 3. Reinforcement Fine-Tuning Using Our MLLM4D-R1-30k Dataset
+Please set up the parameters in [qwen_rollout.sh](./qwen-vl-rft/qwen_rollout.sh) and [qwen_grpo.sh](./qwen-vl-rft/qwen_grpo.sh).
 ```bash
-cd evaluation
-# response generation for MLLM-4D-SFT
-python python main.py --model PATH-to-MLLM-4D-SFT --prompt direct-output --total_frames -1 --max_num -1 --data_path data/real_mc.json --output_dir outputs_MLLM-4D-SFT --overwrite
-# response generation for MLLM-4D-RFT
-python python main.py --model PATH-to-MLLM-4D-RFT --prompt rl_cot --total_frames -1 --max_num -1 --data_path data/real_mc.json --output_dir outputs_MLLM-4D-SFT --overwrite
-# evalution with Qwen3-VL
-python evaluation.py --model_name PATH-to-Qwen3-VL-8B-Instruct --data_name outputs_demo/real_mc_direct-output/MLLM-4D-RFT-1.0.json
+cd qwen-vl-rft
+bash qwen_rollout.sh
+bash qwen_grpo.sh
 ```
 
-
-
 ## 📋 TODO
-- [ ] We have completed the code and data cleanup. Release coming soon!
-- [ ] RFT Stage: Release the `MLLM4D-R1-30k` dataset and `Reinforcement Fine-Tuning code`!
+- [x] **[2026.05.01]** 🔥RFT Stage: Release the `MLLM4D-R1-30k` dataset and `Reinforcement Fine-Tuning code`!
 - [x] **[2026.04.10]** 🔥 Release the evaluation code and results .json!
 - [x] **[2026.03.04]** 🔥 Cold-Start Phase: Release the `Cold-Start Data` and `Cold-Start Fine-Tuning code`!
 - [x] **[2026.03.04]** 🔥 SFT Stage: Release the `MLLM4D-2M` dataset and `Supervised Fine-Tuning code`!
 - [x] **[2026.02.28]** 🔥 Release the `arXiv paper`, `inference demo`, and `pretrained weights`!
 
 ## 🤗 Acknowledgement
-If you find MLLM-4D useful, **please help ⭐ this repo**, which is important to Open-Source projects. Thanks🙏!
-
-Our work is built upon [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL), thanks to their invaluable contributions!
+Our work is built upon [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL) and [ms-swift](https://github.com/modelscope/ms-swift), thanks to their invaluable contributions!
 
 ## 📚 Citation
 If you find the work useful, please consider citing:
